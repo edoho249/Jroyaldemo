@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Reservation.css">
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="Gallery.html">
+    <link rel="stylesheet" href="Order.html">
+    <link rel="stylesheet" href="Reservation.html">
+    <link rel="stylesheet" href="about.html">
+    <title>Make Reservation</title>
+</head>
+<body>
+      
+    <nav class="header">
+        <a href="index.html"><img class="img-logo" src="img/jroyalgrills'n'chopsnewlogo.png"></a>
+        
+        <ul class="navbar">
+            <li class="nav-links"><a href="index.html">Home</a></li>
+            <li class="nav-links"><a href="menu.html">Menu</a></li>
+            <li class="nav-links"><a href="Gallery.html"> Gallery</a></li>
+            <li class="nav-item"><a href="Reservation.html">Reservation</a></li>
+            <li class="nav-links"><a href="about.html">About</a></li>
+            </li>
+                    <li class="hamburger" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                            </svg></a></li>
+        </ul>
+
+        <ul class="sidebar">
+            <li class="sidebarbtn" onclick= hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            <li class="side-nav"><a href="#"></a></li>
+            <li class="side-nav"><a href="index.html">Home</a></li>
+            <li class="side-nav"><a href="menu.html">Menu</a></li>
+            <li class="side-nav"><a href="Gallery.html">Gallery</a></li>
+            <li class="side-nav"><a href="Reservation.html">Reservation</a></li>
+            <li class="side-nav"><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+        
+      <main>
+
+        <h1 style="color: white">Reserve A Table Below</h1>
+      </main>
+   
+      <div class="pad">
+
+        <div class="option">
+            <div class="card1"><img src="img/chef-cooking-kitchen-while-wearing-professional-attire-min.jpg" alt="">
+            <p>Quality Chefs</p>
+            </div>
+            <div class="card1"><img src="img/portrait-man-working-as-waiter-min.jpg" alt="">
+           <div class="word"> <p style="color: goldenrod;">Quality </p> 
+            <p style="color: goldenrod;">Services </p></div>
+            </div>
+            <div class="card1"><img src="img/dinner-table-setup-with-delicious-food-ready-be-served-min.jpg" alt="">
+            <p>Quality Foods</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+       <div class="container">
+        <h1 style="font-size: 50px; font-family: 'Times New Roman', Times, serif;">Reserve A Table</h1>
+        <form action="form">
+            <div class="left">
+                <label for="name" style="color: white;">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="date" style="color: white;">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time" style="color: white;">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests" style="color: white;">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <label for="phone" style="color: white;">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email" style="color: white;">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+                        </div>
+           <div class="right">
+                            <label for="occasion" style="color: white;">Special Occasion:</label>
+                            <input type="text" id="occasion" name="occasion" placeholder="e.g., Birthday, Anniversary">
+                
+                            <label for="serving" style="color: white;">Servings</label>
+                            <select id="serving" name="serving">
+                                <option value="Plenty">A'LaCarte</option>
+                                <option value="Buffet">All You Can Eat Buffet</option>
+                                <option value="Deserts">Deserts</option>
+                                <option value="Appetizers">Appetizers</option>
+                            </select> 
+                
+                            <label for="seating" style="color: white;">Preferred Seating:</label>
+                            <select id="seating" name="seating">
+                                <option value="indoor">Indoor</option>
+                                <option value="outdoor">Outdoor</option>
+                                <option value="booth">Booth</option>
+                                <option value="specific">Specific Table</option>
+                            </select>
+                           
+                            <label for="Popular" style="color: white;">How Did You Hear About Us</label>
+                            <select id="Popular" name="Popular">
+                                <option value="Friends">Friends</option>
+                                <option value="Advertisemen">Advertisement</option>
+                                <option value="Social-Media">Social Media</option>
+                                <option value="Other">Other</option>
+                            </select>
+                           
+
+                            <label for="arrival" style="color: white;">Estimated Arrival Time:</label>
+                            <input type="time" id="arrival" name="arrival">
+                
+                                      
+                            <label for="dietary" style="color: white;">Dietary Restrictions:</label>
+                            <input type="text" id="dietary" name="dietary" placeholder="e.g., Vegan, Gluten-free"> 
+                
+                        </div>
+        </form>
+        <div class="under">
+            <label for="notes" style="color: white;">Additional Notes:</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Any other requests or comments..."></textarea>
+           
+            <button type="submit" style="color: white;">Reserve Table</button>
+        </div>
+       </div>
+       <div class="final">
+        <P style="color: white; font-size: 20px; ">Please, note that business hours are between 8am and 8pm WAT</P>
+        <P style="color: white; font-size: 20px; ">Please let the Time indicated be at least an hour before the estimated arrival time </P>
+       </div>
+      
+
+       
+   <footer>
+  
+    <div class="top">
+     
+        <div class="left">
+        
+             <h2>CONTACT INFO</h2>
+
+             <p>+2348148238997</p>
+
+             <a href="mailto:jroyalaffairs@gmail.com"> <p>jroyalaffairs@gmail.com</p></a>
+
+             <p>36 Behind Flat Road, Nsukka, Nigeria</p>
+
+        </div>
+
+        <div class="middle">
+
+            <h2>SOCIALS</h2>
+            <div class="soco">
+      
+                <div class="sleft">
+                    <img src="img/fb icon.png" alt="">
+                    <img src="img/twitter white.jpg" alt="">
+                    <img src="img/ig icon.png" alt="">
+                </div>
+      
+                <div class="sright">
+                    <p style="font-size: 23px;">Whatsapp</p>
+                    <p style="font-size: 23px;">X</p>
+                    <p style="font-size: 23px;">Instagram</p>
+                </div>
+      
+            </div>
+
+        </div>
+
+        <div class="right">
+            <h2>OPENING HOURS</h2>
+            <p>MONDAY - SATURDAY: 8:00AM - 10:00PM</p>
+            <p>SUNDAY: 8:00AM - 10:00PM</p>
+
+        </div>
+
+
+    </div>
+
+    <hr>
+
+    <div class="bottom">
+
+   <img src="img/sample.png" alt="">
+
+   <p >© 2024 Royal Grills'n'Chops. All rights reserved.</p>
+
+    </div>
+
+   </footer>
+
+      <script src="script.js"></script>
+</body>
+</html>

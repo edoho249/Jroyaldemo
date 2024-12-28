@@ -1,0 +1,134 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+}
+
+h1 {
+  font-size: 36px;
+  color: #2e3a59;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Container */
+.div {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#order-items {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+#order-total {
+  font-weight: bold;
+  font-size: 24px;
+  color: #4CAF50;
+}
+
+/* Payment Form */
+#paymentForm {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#paymentForm img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 200px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"], input[type="tel"], input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+input[type="email"]:focus, input[type="tel"]:focus, input[type="text"]:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.form-submit {
+  text-align: center;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .div {
+      width: 95%;
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 30px;
+  }
+
+  #order-items, #order-total {
+      font-size: 16px;
+  }
+
+  #paymentForm {
+      padding: 20px;
+  }
+
+  button {
+      width: 100%;
+  }
+}

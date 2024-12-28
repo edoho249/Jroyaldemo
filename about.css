@@ -1,0 +1,398 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    
+}
+
+/* Mine */
+
+nav{
+    display: flex;
+    /* justify-content: space-evenly; */
+    background-color: black;
+    height: 60px;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    min-height: 40px;
+    -webkit-backdrop-filter:blur(10px); ;
+    backdrop-filter:blur(10px);
+    background:linear-gradient(45deg ,rgb(245, 244, 248) ,rgba(209, 100, 92, 0.28)) ;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  nav li {
+    list-style: none;
+    color: white;
+    padding:10px;
+    border-radius: 10px;
+    font-family: monospace;
+    transition: 0.7s ease;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    font-size: 20px;
+    font-family: monospace;
+  }
+  
+  .navbar {
+    position: relative;
+    align-content: center;
+    padding: 20px;
+    column-gap: 20px;
+  }
+  
+  .navbar a:hover {
+    color: red;
+  }
+  
+  @media (max-width:1000px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-item{
+        display: none;
+    }
+    
+  }
+  
+  @media (max-width:1000px) { 
+    .img-logo {
+        padding-right: 200px;
+    }
+    
+  }
+  
+  @media (min-width:1200px) {
+    .hamburger {
+        display: none;
+    }
+    
+  }
+  
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    display: none;
+    right: 0;
+    height: 1200px;
+    width: 150px;
+    margin: 0;
+    background-color: black;
+    flex-direction: column;
+    z-index: 101;
+    align-items: center;
+    justify-content: flex-start;
+    }
+    
+    .sidebar a:hover {
+        color: green;
+    }
+    
+    .sidebar a{
+        color: white;
+    }
+
+    .img-logo{
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      padding: 30px;
+      height: 300px;
+    }
+  
+    
+    .sidebarbtn {
+        margin-top: 20px;
+        width: 20px;
+    }
+
+    .nav-item {
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .nav-item:hover {
+        color: #007bff; 
+    }
+    
+    .nav-item::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 10px; 
+        width: 100%; 
+        height: 2px; 
+        background-color: red; 
+        transform: translateX(-50%); 
+    }
+
+    /* header ends */
+
+/* main */
+
+main{
+    background-image: url('img/succulent-steak-paired-with-golden-fries-rich-sauces-wooden-board-min.jpg');
+  background-size: cover;
+  height: 70vh;
+}
+
+
+main, h1{
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 90px;
+    backdrop-filter:blur(2.5px);
+    color: white;
+    align-content: center;
+}
+/* main ends */
+
+/* container */
+@media (max-width:1000px) {
+    .container{
+        display: flex;
+        height: auto;
+        flex-direction: column;
+    }
+}
+
+.container{
+    display: flex; 
+    background-color: rgb(248, 247, 247);
+    padding-bottom: 10px;
+  }
+  
+
+  
+  
+  .l1{
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+  }
+  
+  .l1 img{
+    height: 50px;
+  }
+  
+  .write h1{
+    font-size: 25px;
+    color: black;
+    text-align: left;
+  }
+  
+  .write p{
+    font-size: 20px;
+  }
+  
+/* container ends */
+
+/* section */
+
+@media (max-width:1000px) {
+    section{
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:480px) {
+    .right img{
+        height: -10rem;
+    }
+}
+section{
+    display: flex;
+    padding: 60px;
+}
+
+.left h1{
+font-size: 60px;
+color: black;
+text-align: center;
+padding-bottom: 22px;
+}
+
+.left h5{
+ font-size: 30px;
+ padding-bottom: 22px;
+}
+
+
+.left p{
+font-size: 15px;
+padding-bottom: 22px;
+}
+
+.right img{
+    height: 25rem;
+    border-radius: 10px;
+    width: 25rem;
+}
+
+
+/* footer */
+footer {
+  padding: 20px;
+  background-color: rgb(82, 13, 13);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+footer .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+footer .top .left, footer .top .middle, footer .top .right {
+  flex: 1;
+  padding: 10px;
+}
+
+footer h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+footer p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+footer .soco {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  gap: 20px; 
+}
+
+footer .sleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Reduced gap between images */
+}
+
+footer .sleft img {
+  width: 30px;
+  height: 30px;
+}
+
+footer .sright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px; /* Reduced gap between text items */
+  font-size: 23px;
+}
+
+footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+footer .bottom img {
+  width: 200px;
+  height: auto;
+}
+
+footer hr {
+  border: 0;
+  border-top: 1px solid #444;
+  margin: 20px 0;
+}
+
+.left a{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  footer .top {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  footer .top .left,
+  footer .top .middle,
+  footer .top .right {
+      flex: none;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  footer .soco {
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+      gap: 15px; /* Adjusted gap for mobile */
+  }
+
+  footer .sleft,
+  footer .sright {
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  }
+
+  footer .bottom {
+      flex-direction: column;
+      text-align: center;
+      margin-top: 30px;
+  }
+
+  footer .bottom img {
+      width: 100px;
+      margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer h2 {
+      font-size: 1em;
+  }
+
+  footer p {
+      font-size: 0.9em;
+  }
+
+  footer .sleft img {
+      width: 25px;
+      height: 25px;
+  }
+}
+/* footer ends */
