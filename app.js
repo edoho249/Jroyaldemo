@@ -41,3 +41,15 @@ function typeEffect() {
 
 // Start the typing effect
 typeEffect();
+
+
+
+// POP UP WHATSAPP
+function showPopup(){
+
+document.getElementById('popup').style.display = 'block';}
+
+function closePopup(){
+
+document.getElementById('popup').style.display = 'none';
+}

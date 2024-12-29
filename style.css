@@ -275,6 +275,128 @@ background-color: #444;
 color: white;
 }
 
+.fixed-whatsapp img{
+  height: 25px;
+  margin-bottom: 3px;
+}
+
+.fixed-whatsapp{
+  position: fixed;
+  bottom: 10px;
+  left: 80%;
+  cursor: pointer;
+  z-index: 1000;
+  width: 15rem;
+  height: 40px;
+  gap: 10px;
+  background-color: rgb(110, 7, 7);
+  border-radius: 20px;
+  color: white;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.popup{
+  display: none;
+  position: absolute;
+  bottom: 100px;
+  left: 80%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 200px;
+  text-align: center;
+  width: 20rem;
+  position: fixed;
+  height: 150px;
+}
+
+.popup-message{
+  display: flex;
+  flex-direction: column;
+}
+
+.close-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  text-align: center;
+  background-color: white;
+  font-size: 20px;
+  color: rgba(8, 0, 0, 0.863);
+  cursor: pointer;
+}
+
+.close-btn:hover{
+  color: #f44336;
+}
+
+.one{
+background-color: rgb(110, 7, 7);
+display: flex;
+flex-direction: row;
+height: 50px;
+gap: 15px;
+}
+
+.one img{
+  height: 30px;
+}
+
+.oneT{
+  padding-left:10px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: left;
+}
+
+.oneT, .twoT, h1{
+  font-size: 15px;
+}
+
+.oneT, .twoT, .three p{
+  font-size: 15px;
+}
+
+.two{
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  cursor: pointer;
+  height: 75px;
+  flex-direction: row;
+  background-color: rgba(240, 248, 255, 0.685);
+}
+
+.twodot{
+  background-color: green;
+  border-radius: 10px;
+  height: 15px;
+  width: 15px;
+}
+
+.twoT{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: black;
+}
+
+.three{
+  color: rgba(8, 0, 0, 0.815);
+  background-color: white;
+  height: 20px;
+  /* padding: 15px; */
+}
+
+
 @media (max-width:1000px) {
   .main2{
     display: block;
@@ -291,6 +413,16 @@ color: white;
 
 .contentss h3{
   font-size: 16px;
+}
+
+.fixed-whatsapp{
+ left: 45%;
+}
+
+.popup{
+z-index: 1000;
+bottom: 50px;
+left: 45%;
 }
 
 }
