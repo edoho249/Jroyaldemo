@@ -98,18 +98,20 @@ nav a {
   top: 0;
   display: none;
   right: 0;
-  height: 1200px;
-  width: 150px;
+  height: 100vh;
+  width: 100%;
   margin: 0;
-  background-color: black;
+  background-color: rgb(82, 13, 13);
   flex-direction: column;
   z-index: 101;
-  align-items: center;
+padding: 10px;
+font-size: 50px;
+  align-items: left;
   justify-content: flex-start;
   }
   
   .sidebar a:hover {
-      color: green;
+      color: orange;
   }
   
   .sidebar a{
@@ -279,7 +281,7 @@ input, select, textarea {
     flex-direction: column;
 }
 
-button {
+ .under button {
     width: 300px;
     padding: 20px;
 
@@ -291,7 +293,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+ .under button:hover {
     background-color: rgba(255, 217, 0, 0.603);
 }
 
@@ -322,143 +324,190 @@ button:hover {
     background-color: rgb(82, 13, 13);
     /* margin-left: 420px; */
 }
+
+
 /* footer */
+
+  
+.newsletter-container {
+  text-align: center;
+  max-width: 400px;
+}
+
+.newsletter-container h1 {
+  margin-bottom: 10px;
+  font-size: 1.7em;
+  color: white;
+}
+
+.newsletter-container p {
+  margin-bottom: 20px;
+  color: white;
+}
+
+#newsletter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#email {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+#newsletter-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#newsletter-form button:hover {
+  background-color: #0056b3;
+}
+
+#message {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: green;
+}
+
+
 footer {
-    padding: 20px;
-    background-color: rgb(82, 13, 13);
-    color: white;
-    font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: rgb(82, 13, 13);
+  color: white;
+
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+footer .topa {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+footer .topa .lefta, .newsletter-container, footer .topa .righta {
+  padding: 10px;
+}
+
+.lefta a{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+footer h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+footer p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+footer .socoa {
+  display: flex;
+  gap: 20px; 
+}
+
+
+footer .slefta img {
+  width: 30px;
+  height: 30px;
+}
+
+footer .srighta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px; /* Reduced gap between text items */
+  font-size: 23px;
+}
+
+footer .bottoma {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+footer .bottoma img {
+  width: 200px;
+  height: auto;
+}
+
+footer hr {
+  border: 0;
+  border-top: 1px solid #444;
+  margin: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  footer .topa {
+      flex-direction: column;
+      align-items: center;
   }
-  
-  footer .top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+
+  footer .topa .lefta,
+  footer .topa .middlea,
+  footer .topa .righta {
+      flex: none;
+      text-align: center;
+      margin-bottom: 20px;
   }
-  
-  footer .top .left, footer .top .middle, footer .top .right {
-    flex: 1;
-    padding: 10px;
+
+  footer .socoa {
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+      gap: 15px; /* Adjusted gap for mobile */
   }
-  
+
+  footer .slefta,
+  footer .srighta {
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  }
+
+  footer .bottoma {
+      flex-direction: column;
+      text-align: center;
+      margin-top: 30px;
+  }
+
+  footer .bottoma img {
+      width: 100px;
+      margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
   footer h2 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
+      font-size: 1em;
   }
-  
-  .left a{
-    list-style: none;
-    text-decoration: none;
-    color: white;
-  }
-  
 
   footer p {
-    font-size: 1em;
-    margin: 5px 0;
+      font-size: 0.9em;
   }
-  
-  footer .soco {
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    gap: 20px; 
+
+  footer .slefta img {
+      width: 25px;
+      height: 25px;
   }
-  
-  footer .sleft {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* Reduced gap between images */
-  }
-  
-  footer .sleft img {
-    width: 30px;
-    height: 30px;
-  }
-  
-  footer .sright {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px; /* Reduced gap between text items */
-    font-size: 23px;
-  }
-  
-  footer .bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  footer .bottom img {
-    width: 200px;
-    height: auto;
-  }
-  
-  footer hr {
-    border: 0;
-    border-top: 1px solid #444;
-    margin: 20px 0;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    footer .top {
-        flex-direction: column;
-        align-items: center;
-    }
-  
-    footer .top .left,
-    footer .top .middle,
-    footer .top .right {
-        flex: none;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-  
-    footer .soco {
-        flex-direction: row;
-        display: flex;
-        align-items: center;
-        gap: 15px; /* Adjusted gap for mobile */
-    }
-  
-    footer .sleft,
-    footer .sright {
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-  
-    footer .bottom {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 30px;
-    }
-  
-    footer .bottom img {
-        width: 100px;
-        margin-bottom: 10px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    footer h2 {
-        font-size: 1em;
-    }
-  
-    footer p {
-        font-size: 0.9em;
-    }
-  
-    footer .sleft img {
-        width: 25px;
-        height: 25px;
-    }
-  }
-  /* footer ends */
+}
+/* footer ends */
