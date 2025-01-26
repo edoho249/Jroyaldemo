@@ -1,27 +1,48 @@
 
-const pageToScroll = document.querySelector('.btn-one');
-const line6 = document.querySelector('#line__8');
-
-pageToScroll.addEventListener('click', function(){
-    pageToScroll.scrollIntoView({behavior:"smooth"});
-});
 
 
-const btnToScroll = document.querySelector('.btn-two');
-const line4 = document.querySelector('#line__six');
 
-btnToScroll.addEventListener('click', function(){
-    btnToScroll.scrollIntoView({behavior:"smooth"});
-});
+const carouselTrack = document.querySelector('.carousel-track');
+const prevButton = document.querySelector('.prev-btn');
+const nextButton = document.querySelector('.next-btn');
+const images = document.querySelectorAll('.carousel-track img');
 
+let currentIndex = 0;
 
-function showSidebar() {
-    const sidebar = document.querySelector('.sidebar')
-           sidebar.style.display = 'flex'
+function updateCarouselPosition() {
+  const translateX = -(currentIndex * (100 / 4)); // Move one image's width (1/4 of the container)
+  carouselTrack.style.transform = `translateX(${translateX}%)`;
 }
 
+// Move to the previous image
+prevButton.addEventListener('click', () => {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = images.length - 4; // Stop at the first image
+  }
+  updateCarouselPosition();
+});
 
-function hideSidebar() {
-    const sidebar = document.querySelector('.sidebar')
-           sidebar.style.display = 'none'
-}
+// Move to the next image
+nextButton.addEventListener('click', () => {
+  currentIndex++;
+  if (currentIndex > images.length - 4) {
+    currentIndex = 0; // Wrap back to the start
+  }
+  updateCarouselPosition();
+});
+
+// Auto-slide every 3 seconds
+let autoSlideInterval = setInterval(() => {
+  nextButton.click(); // Trigger the next button click
+}, 3000);
+
+// Pause auto-slide on hover
+carouselTrack.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+
+// Resume auto-slide on mouse leave
+carouselTrack.addEventListener('mouseleave', () => {
+  autoSlideInterval = setInterval(() => {
+    nextButton.click();
+  }, 3000);
+});

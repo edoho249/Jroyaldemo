@@ -221,49 +221,139 @@ main, h1{
 /* container ends */
 
 /* section */
-
-@media (max-width:1000px) {
-    section{
-        height: auto;
-        width: auto;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media (max-width:480px) {
-    .right img{
-        height: -10rem;
-    }
-}
 section{
-    display: flex;
-    padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-.left h1{
-font-size: 60px;
-color: black;
-text-align: center;
-padding-bottom: 22px;
+section, p{
+ font-size: 20px;
 }
 
-.left h5{
- font-size: 30px;
- padding-bottom: 22px;
+ 
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  left: 5%;
+  padding: 30px;
+  top:1%;
+  overflow: hidden;
+  border-radius: 15px;
+  /* box-shadow: 0 8px 16px rgba(226, 225, 225, 0.493); */
+  /* background-color: #ffffff; */
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img{
+  height: 300px;
+  width: 400px;
+}
+
+.carbtn {
+  position: absolute;
+  top: 10px;  /* Slight padding from the top */
+  right: 20px; /* Padding from the right */
+  display: flex;
+  gap: 10px; /* Space between the buttons */
+  padding-right: 35px;
+  z-index: 10; /* Ensure buttons are above the carousel content */
+}
+
+.prev-btn,
+.next-btn {
+  width: 35px;  /* Small width */
+  height: 35px; /* Small height */
+  padding: 0;  /* Remove padding */
+  font-size: 1.4rem;  /* Slightly smaller font size */
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%; /* Make buttons perfectly rounded */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Styles for Smaller Screens (Mobile) */
+@media (max-width: 768px) {
+  .carousel {
+    width: 95%;
+  }
+
+  .carousel-track {
+    gap: 10px; /* Reduced gap between items */
+    padding: 10px;
+  }
+
+ 
+
+  .carbtn {
+    top: 5px;
+    right: 10px;
+    gap: 8px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    width: 100%;
+  }
+
+  .carousel-track {
+    gap: 5px; /* Further reduce gap on very small screens */
+    padding: 5px;
+  }
+
+  .boxx {
+    flex: 0 0 100%; /* Display 1 item at a time */
+  }
+
+  .carbtn {
+    top: 5px;
+    right: 5px;
+    gap: 5px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    width: 20px;
+    height: 20px;
+    font-size: 0.9rem;
+  }
 }
 
 
-.left p{
-font-size: 15px;
-padding-bottom: 22px;
-}
-
-.right img{
-    height: 25rem;
-    border-radius: 10px;
-    width: 25rem;
-}
  /* footer */
 
   

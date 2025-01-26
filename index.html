@@ -98,6 +98,15 @@
 </div>
 </div>
 
+<div class="message-overlay" id="messageOverlay">
+  <div class="message-box">
+    <span class="close-btn" id="closeMessage">&times;</span>
+    <h2>Sign Up Now!</h2>
+    <p>Join us to get the latest updates, exclusive deals and be part of the family.</p>
+    <a href="/signup.html" class="sign-up-link" id="signUpLink">Sign Up</a>
+  </div>
+</div>
+
     <main>
 
 
@@ -162,36 +171,33 @@
   <h1 style="color: tomato;">POPULAR DISHES</h1>
 </div>
 
-<div class="containers">
-
-  <div class="boxx" data-category="dishes" id="box24">
-    <img src="img/dish1.jpg" alt="Grilled Chicken">
-    <div class="h1">Naija Jollof</div>
-    <div class="cart">
-        <p>₦5500</p>
-        <button class="add-to-cart-btn" data-name="Naija Jollof" data-price="5500">Add To Cart</button>
+<div class="carousel">
+ <div class="carbtn">
+  <button class="prev-btn">&#8249;</button>
+  <button class="next-btn">&#8250;</button>
+ </div>
+  <div class="carousel-wrapper">
+    <div class="carousel-track"> 
+      <div class="boxx" data-category="dishes" id="box27">
+        <img src="img/dish4.jpg" alt="Grilled Chicken">
+        <div class="h1">Cocunut Rice</div>
+        <div class="cart">
+            <p>₦6000</p>
+            <button class="add-to-cart-btn" data-name="Cocunut Rice" data-price="6000">Add To Cart</button>
+        </div>
     </div>
-</div>
 
-<div class="boxx" data-category="dishes" id="box25">
-    <img src="img/dish2.jpg" alt="Grilled Chicken">
-    <div class="h1">Fried Rice</div>
-    <div class="cart">
-        <p>₦5500</p>
-        <button class="add-to-cart-btn" data-name="Fried Rice" data-price="5500">Add To Cart</button>
-    </div>
-</div>
 
-<div class="boxx" data-category="dishes" id="box26">
-    <img src="img/dish3.jpg" alt="Grilled Chicken">
-    <div class="h1">Egg-Fried Rice</div>
-    <div class="cart">
-        <p>₦6000</p>
-        <button class="add-to-cart-btn" data-name="Egg-Fried Rice" data-price="6000">Add To Cart</button>
-    </div>
-</div>
+    <div class="boxx" data-category="dishes" id="box27">
+      <img src="img/dish4.jpg" alt="Grilled Chicken">
+      <div class="h1">Cocunut Rice</div>
+      <div class="cart">
+          <p>₦6000</p>
+          <button class="add-to-cart-btn" data-name="Cocunut Rice" data-price="6000">Add To Cart</button>
+      </div>
+  </div>
 
-<div class="boxx" data-category="dishes" id="box27">
+  <div class="boxx" data-category="dishes" id="box27">
     <img src="img/dish4.jpg" alt="Grilled Chicken">
     <div class="h1">Cocunut Rice</div>
     <div class="cart">
@@ -200,44 +206,92 @@
     </div>
 </div>
 
-<div class="boxx" data-category="dishes" id="box28">
-    <img src="img/dish5.jpg" alt="Grilled Chicken">
-    <div class="h1">Rice with Stew</div>
-    <div class="cart">
-        <p>₦6000</p>
-        <button class="add-to-cart-btn" data-name="Rice with Stew" data-price="6000">Add To Cart</button>
+    <div class="boxx" data-category="dishes" id="box27">
+        <img src="img/dish4.jpg" alt="Grilled Chicken">
+        <div class="h1">Cocunut Rice</div>
+        <div class="cart">
+            <p>₦6000</p>
+            <button class="add-to-cart-btn" data-name="Cocunut Rice" data-price="6000">Add To Cart</button>
+        </div>
     </div>
-</div>
 
-<div class="boxx" data-category="dishes" id="box29">
-    <img src="img/dish6.jpg" alt="Grilled Chicken">
-    <div class="h1">Sea-Food Rice</div>
-    <div class="cart">
-        <p>₦6000</p>
-        <button class="add-to-cart-btn" data-name="Sea-Food Rice" data-price="6000">Add To Cart</button>
+    <div class="boxx" data-category="dishes" id="box28">
+        <img src="img/dish5.jpg" alt="Grilled Chicken">
+        <div class="h1">Rice with Stew</div>
+        <div class="cart">
+            <p>₦6000</p>
+            <button class="add-to-cart-btn" data-name="Rice with Stew" data-price="6000">Add To Cart</button>
+        </div>
     </div>
-</div>
 
-<div class="boxx" data-category="dishes" id="box30">
-    <img src="img/dish7.jpg" alt="Grilled Chicken">
-    <div class="h1">Spaghetti</div>
-    <div class="cart">
-        <p>₦6000</p>
-        <button class="add-to-cart-btn" data-name="Spaghetti" data-price="6000">Add To Cart</button>
+    <div class="boxx" data-category="dishes" id="box29">
+        <img src="img/dish6.jpg" alt="Grilled Chicken">
+        <div class="h1">Sea-Food Rice</div>
+        <div class="cart">
+            <p>₦6000</p>
+            <button class="add-to-cart-btn" data-name="Sea-Food Rice" data-price="6000">Add To Cart</button>
+        </div>
     </div>
-</div>
-<div class="boxx" data-category="dishes" id="box31">
-    <img src="img/dish8.jpg" alt="Grilled Chicken">
-    <div class="h1">Macaroni</div>
-    <div class="cart">
-        <p>₦4500</p>
-        <button class="add-to-cart-btn" data-name="Macaroni" data-price="4500">Add To Cart</button>
+
+    <div class="boxx" data-category="dishes" id="box30">
+        <img src="img/dish7.jpg" alt="Grilled Chicken">
+        <div class="h1">Spaghetti</div>
+        <div class="cart">
+            <p>₦6000</p>
+            <button class="add-to-cart-btn" data-name="Spaghetti" data-price="6000">Add To Cart</button>
+        </div>
     </div>
+    <div class="boxx" data-category="dishes" id="box27">
+      <img src="img/dish4.jpg" alt="Grilled Chicken">
+      <div class="h1">Cocunut Rice</div>
+      <div class="cart">
+          <p>₦6000</p>
+          <button class="add-to-cart-btn" data-name="Cocunut Rice" data-price="6000">Add To Cart</button>
+      </div>
+  </div>
+
+    <div class="boxx" data-category="drinks" id="box19">
+      <img src="img/drink1.jpg" alt="Smoothie">
+      <div class="h1">Vodka</div>
+      <div class="cart">
+          <p>₦3000</p>
+          <button class="add-to-cart-btn" data-name="Smtnn" data-price="3000">Add To Cart</button>
+      </div>
+  </div>
+
+  <div class="boxx" data-category="drinks" id="box20">
+      <img src="img/drink2.jpg" alt="Smoothie">
+      <div class="h1">Scotch</div>
+      <div class="cart">
+          <p>₦3000</p>
+          <button class="add-to-cart-btn" data-name="Scotch" data-price="3000">Add To Cart</button>
+      </div>
+  </div>
+
+  <div class="boxx" data-category="drinks" id="box21">
+      <img src="img/drink3.jpg" alt="Smoothie">
+      <div class="h1">Vodka</div>
+      <div class="cart">
+          <p>₦10000</p>
+          <button class="add-to-cart-btn" data-name="Vodka" data-price="10000">Add To Cart</button>
+      </div>
+  </div>
+
+  <div class="boxx" data-category="drinks" id="box22">
+      <img src="img/drink4.jpg" alt="Smoothie">
+      <div class="h1">Red Wine</div>
+      <div class="cart">
+          <p>₦10000</p>
+          <button class="add-to-cart-btn" data-name="Red Wine" data-price="10000">Add To Cart</button>
+      </div>
+  </div>
+
+    </div>
+  </div>
 </div>
-</div>  
 
 </section>
-
+6
 <div class="cont3">
     
   <div class="image"><img src="img/hand-holding-delicious-ice-cream.png" alt=""></div>

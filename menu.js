@@ -141,4 +141,22 @@ window.addEventListener('load', loadCart);
 
 
 
+// Get the elements
+const messageOverlay = document.getElementById('messageOverlay');
+const closeMessage = document.getElementById('closeMessage');
+
+// Show the popup after 5 seconds
+setTimeout(() => {
+  messageOverlay.style.display = 'flex';
+}, 5000);
+
+// Close the popup when the close button is clicked
+closeMessage.addEventListener('click', () => {
+  messageOverlay.style.display = 'none';
+});
+
+
+
+
+
 
