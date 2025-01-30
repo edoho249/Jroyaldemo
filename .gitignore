@@ -1,0 +1,31 @@
+__pycache__/
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# migrations
+migrations/
+
+# helper shell scripts
+scripts/
+
+# user uploads
+uploads/
+
+# logs
+logs/
