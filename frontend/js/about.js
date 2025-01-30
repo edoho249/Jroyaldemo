@@ -1,11 +1,7 @@
-
-
-
-
-const carouselTrack = document.querySelector('.carousel-track');
-const prevButton = document.querySelector('.prev-btn');
-const nextButton = document.querySelector('.next-btn');
-const images = document.querySelectorAll('.carousel-track img');
+const carouselTrack = document.querySelector(".carousel-track");
+const prevButton = document.querySelector(".prev-btn");
+const nextButton = document.querySelector(".next-btn");
+const images = document.querySelectorAll(".carousel-track img");
 
 let currentIndex = 0;
 
@@ -15,7 +11,7 @@ function updateCarouselPosition() {
 }
 
 // Move to the previous image
-prevButton.addEventListener('click', () => {
+prevButton.addEventListener("click", () => {
   currentIndex--;
   if (currentIndex < 0) {
     currentIndex = images.length - 4; // Stop at the first image
@@ -24,7 +20,7 @@ prevButton.addEventListener('click', () => {
 });
 
 // Move to the next image
-nextButton.addEventListener('click', () => {
+nextButton.addEventListener("click", () => {
   currentIndex++;
   if (currentIndex > images.length - 4) {
     currentIndex = 0; // Wrap back to the start
@@ -38,10 +34,12 @@ let autoSlideInterval = setInterval(() => {
 }, 3000);
 
 // Pause auto-slide on hover
-carouselTrack.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+carouselTrack.addEventListener("mouseenter", () =>
+  clearInterval(autoSlideInterval)
+);
 
 // Resume auto-slide on mouse leave
-carouselTrack.addEventListener('mouseleave', () => {
+carouselTrack.addEventListener("mouseleave", () => {
   autoSlideInterval = setInterval(() => {
     nextButton.click();
   }, 3000);

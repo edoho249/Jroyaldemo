@@ -1,535 +1,779 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="index.html">
-    <link rel="stylesheet" href="Gallery.html">
-    <link rel="stylesheet" href="Order.html">
-    <link rel="stylesheet" href="Reservation.html">
-    <link rel="stylesheet" href="about.html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="index.html" />
+    <link rel="stylesheet" href="Gallery.html" />
+    <link rel="stylesheet" href="Order.html" />
+    <link rel="stylesheet" href="Reservation.html" />
+    <link rel="stylesheet" href="about.html" />
     <title>Food Menu</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="header">
-        <a href="index.html"><img class="img-logo" src="img/jroyalgrills'n'chopsnewlogo.png"></a>
-        
-        <ul class="navbar">
-            <li class="nav-links"><a href="index.html">Home</a></li>
-            <li class="nav-item"><a href="menu.html">Menu</a></li>
-            <li class="nav-links"><a href="Gallery.html"> Gallery</a></li>
+      <a href="index.html"
+        ><img class="img-logo" src="../img/jroyalgrills'n'chopsnewlogo.png"
+      /></a>
 
-            <li class="nav-links"><a href="Reservation.html">Reservation</a></li>
-            <li class="nav-links"><a href="about.html">About</a></li>
-            </li>
-            <li class="nav-items">
-                <a href="#" id="cart-icon">
-                    <img src="img/icons8-cart-50.png" style="height: 30px;" alt="Cart">
-                    <span class="cart-count">(0)</span>
-                </a>
-            </li>
+      <ul class="navbar">
+        <li class="nav-links"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="menu.html">Menu</a></li>
+        <li class="nav-links"><a href="Gallery.html"> Gallery</a></li>
+        <li class="nav-links"><a href="Reservation.html">Reservation</a></li>
+        <li class="nav-links"><a href="about.html">About</a></li>
+        <li class="nav-items">
+          <a href="#" id="cart-icon">
+            <img
+              src="../img/icons8-cart-50.png"
+              style="height: 30px"
+              alt="Cart"
+            />
+            <span class="cart-count">(0)</span>
+          </a>
+        </li>
 
-                    <li class="hamburger" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                                viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-                                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                            </svg></a></li>
-        </ul>
+        <li class="hamburger" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
 
-        <ul class="sidebar">
-            <li class="sidebarbtn" onclick= hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#e8eaed">
-                        <path
-                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg></a></li>
-            <li class="side-nav"><a href="#"></a></li>
-            <li class="side-nav"><a href="index.html">Home</a></li>
-            <li class="side-nav"><a href="menu.html">Menu</a></li>
-            <li class="side-nav"><a href="Gallery.html">Gallery</a></li>
-            <li class="side-nav"><a href="Reservation.html">Reservation</a></li>
-            <li class="side-nav"><a href="about.html">About Us</a></li>
-        </ul>
+      <ul class="sidebar">
+        <li class="sidebarbtn" onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li class="side-nav"><a href="#"></a></li>
+        <li class="side-nav"><a href="index.html">Home</a></li>
+        <li class="side-nav"><a href="menu.html">Menu</a></li>
+        <li class="side-nav"><a href="Gallery.html">Gallery</a></li>
+        <li class="side-nav"><a href="Reservation.html">Reservation</a></li>
+        <li class="side-nav"><a href="about.html">About Us</a></li>
+      </ul>
     </nav>
 
-
     <div class="message-overlay" id="messageOverlay">
-        <div class="message-box">
-          <span class="close-btn" id="closeMessage">&times;</span>
-          <h2>Sign Up Now!</h2>
-          <p>Join us to get the latest updates, exclusive deals and be part of the family.</p>
-          <a href="/signup.html" class="sign-up-link" id="signUpLink">Sign Up</a>
+      <div class="message-box">
+        <span class="close-btn" id="closeMessage">&times;</span>
+        <h2>Sign Up Now!</h2>
+        <p>
+          Join us to get the latest updates, exclusive deals and be part of the
+          family.
+        </p>
+        <a href="/signup.html" class="sign-up-link" id="signUpLink">Sign Up</a>
+      </div>
+    </div>
+
+    <h1 style="padding: 60px">Our Regular Menu Pack</h1>
+
+    <div class="button">
+      <button
+        style="background-color: olivedrab; color: white"
+        onclick="filterCategory('all')"
+      >
+        All
+      </button>
+      <button onclick="filterCategory('soup')">Soup</button>
+      <button onclick="filterCategory('vegetarian')">Vegetarian</button>
+      <button onclick="filterCategory('dessert')">Dessert</button>
+      <button onclick="filterCategory('drinks')">Drinks</button>
+      <button onclick="filterCategory('dishes')">Dishes</button>
+      <button onclick="filterCategory('snacks')">Snacks</button>
+    </div>
+
+    <div class="container">
+      <!-- Lasagna Dish (Soup) -->
+      <div class="boxx" data-category="soup" id="box1">
+        <img src="../img/Soup1.jpg" alt="Lasagna" />
+        <div class="h1">Melon-soup</div>
+        <div class="cart">
+          <p>₦5000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            Add To Cart
+          </button>
         </div>
       </div>
-      
 
+      <div class="boxx" data-category="soup" id="box2">
+        <img src="../img/Soup2.jpg" alt="Lasagna" />
+        <div class="h1">Afang-Soup</div>
+        <div class="cart">
+          <p>₦5000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Afang-Soup"
+            data-price="5000"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
 
-            <h1 style="padding: 60px;">Our Regular Menu Pack</h1>
-        
-                <div class="button">
-                    <button style="background-color: olivedrab; color: white;" onclick="filterCategory('all')">All</button>
-                    <button onclick="filterCategory('soup')">Soup</button>
-                    <button onclick="filterCategory('vegetarian')">Vegetarian</button>
-                    <button onclick="filterCategory('dessert')">Dessert</button>
-                    <button onclick="filterCategory('drinks')">Drinks</button>
-                    <button onclick="filterCategory('dishes')">Dishes</button>
-                    <button onclick="filterCategory('snacks')">Snacks</button>
-                </div>  
-            
+      <div class="boxx" data-category="soup" id="box300">
+        <img src="../img/Soup3.jpg" alt="Lasagna" />
+        <div class="h1">White-Soup</div>
+        <div class="cart">
+          <p>₦5000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="White-Soup"
+            data-price="5000"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
 
-                <div class="container">
-                    <!-- Lasagna Dish (Soup) -->
-                    <div class="boxx" data-category="soup" id="box1">
-                     <img src="img/Soup1.jpg" alt="Lasagna">
-                     <div class="h1">Melon-soup</div>
-                     <div class="cart">
-                         <p>₦5000</p>
-                         <button class="add-to-cart-btn" data-name="Melon-soup" data-price="5000">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="soup" id="box2">
-                     <img src="img/Soup2.jpg" alt="Lasagna">
-                     <div class="h1">Afang-Soup</div>
-                     <div class="cart">
-                         <p>₦5000</p>
-                         <button class="add-to-cart-btn" data-name="Afang-Soup" data-price="5000">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="soup" id="box300">
-                     <img src="img/Soup3.jpg" alt="Lasagna">
-                     <div class="h1">White-Soup</div>
-                     <div class="cart">
-                         <p>₦5000</p>
-                         <button class="add-to-cart-btn" data-name="White-Soup" data-price="5000">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="soup" id="box4">
-                     <img src="img/Soup4.jpg" alt="Lasagna">
-                     <div class="h1">Vegetable-Soup</div>
-                     <div class="cart"> 
-                         <p>₦5000</p>
-                         <button class="add-to-cart-btn" data-name="Vegetable-Soup" data-price="5000">Add To Cart</button>
-                     </div>
-                 </div>
-              
-                  <!-- Vegetarian Dish -->
-                  <div class="boxx" data-category="vegetarian" id="box5">
-                     <img src="img/vegetarian1.jpg" alt="Vegetarian Dish">
-                     <div class="h1">Moi-Moi</div>
-                     <div class="cart">
-                         <p>₦800</p>
-                         <button class="add-to-cart-btn" data-name="Moi-Moi" data-price="800">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="vegetarian" id="box6">
-                     <img src="img/vegetarian2.jpg" alt="Vegetarian Dish">
-                     <div class="h1">Fried Plantain$Beans</div>
-                     <div class="cart">
-                         <p>₦1250</p>                    
-                             <button class="add-to-cart-btn" data-name="Fried Plantain with Beans" data-price="1250">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="vegetarian" id="box7">
-                     <img src="img/vegetarian3.jpg" alt="Vegetarian Dish">
-                     <div class="h1">Cooked Potatoes</div>
-                     <div class="cart">
-                         <p>₦1500</p>               
-                                  <button class="add-to-cart-btn" data-name="Cooked Potatoes" data-price="1500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="vegetarian" id="box8">
-                     <img src="img/vegetarian4.jpg" alt="Vegetarian Dish">
-                     <div class="h1">Yam Porridge</div>
-                     <div class="cart">
-                         <p>₦2800</p>                    
-                             <button class="add-to-cart-btn" data-name="Yam Porridge" data-price="2800">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="vegetarian" id="box9">
-                     <img src="img/vegetarian5.jpg" alt="Vegetarian Dish" id="box9">
-                     <div class="h1">Plantain Porridge</div>
-                     <div class="cart">
-                         <p>₦2800</p>                    
-                             <button class="add-to-cart-btn" data-name="Plantain Porridge" data-price="2800">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="vegetarian" id="box10">
-                     <img src="img/vegetarian6-min.jpg" alt="Vegetarian Dish">
-                     <div class="h1">Beans Cake</div>
-                     <div class="cart">
-                         <p>₦800</p>                    
-                             <button class="add-to-cart-btn" data-name="Beans Cake" data-price="800">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 
-                 <!-- Dessert Dish -->
-                 <div class="boxx" data-category="dessert" id="box12">
-                     <img src="img/dessert1.jpg" alt="Chocolate Cake">
-                     <div class="h1">Chocolate Cake</div>
-                     <div class="cart">
-                         <p>₦1300</p>
-                         <button class="add-to-cart-btn" data-name="Chocolate Cake" data-price="1300">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="dessert" id="box13">
-                     <img src="img/dessert13.jpg" alt="Chocolate Cake">
-                     <div class="h1">Sandwich</div>
-                     <div class="cart">
-                         <p>₦1400</p>
-                         <button class="add-to-cart-btn" data-name="Sandwich" data-price="1400">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="dessert" id="box14">
-                     <img src="img/dessert2.jpg" alt="Chocolate Cake">
-                     <div class="h1">Vanilla Cake</div>
-                     <div class="cart">
-                         <p>₦1300</p>
-                         <button class="add-to-cart-btn" data-name="Vanilla Cake" data-price="1300">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="dessert" id="box15">
-                     <img src="img/dessert3.jpg" alt="Chocolate Cake">
-                     <div class="h1">Chocolate ice-cream</div>
-                     <div class="cart">
-                         <p>₦1300</p>
-                         <button class="add-to-cart-btn" data-name="Chocolate ice-cream" data-price="1300">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="dessert" id="box16">
-                     <img src="img/dessert4.jpg" alt="Chocolate Cake">
-                     <div class="h1">Doughnut</div>
-                     <div class="cart">
-                         <p>₦1300</p>
-                         <button class="add-to-cart-btn" data-name="Doughnut" data-price="1300">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="dessert" id="box17">
-                     <img src="img/dessert5.jpg" alt="Chocolate Cake">
-                     <div class="h1">Berries</div>
-                     <div class="cart">
-                         <p>₦1450</p>
-                         <button class="add-to-cart-btn" data-name="Berries" data-price="1450">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="dessert" id="box18">
-                     <img src="img/dessert6.jpg" alt="Chocolate Cake">
-                     <div class="h1">Choco-Vanila</div>
-                     <div class="cart">
-                         <p>₦1400</p>
-                         <button class="add-to-cart-btn" data-name="Choco-Vanilla" data-price="1400">Add To Cart</button>
-                     </div>
-                 </div>
-         
-         
-                 <!-- Drinks -->
-                 <div class="boxx" data-category="drinks" id="box19">
-                     <img src="img/drink1.jpg" alt="Smoothie">
-                     <div class="h1">Smtnn</div>
-                     <div class="cart">
-                         <p>₦3000</p>
-                         <button class="add-to-cart-btn" data-name="Smtnn" data-price="3000">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="drinks" id="box20">
-                     <img src="img/drink2.jpg" alt="Smoothie">
-                     <div class="h1">Scotch</div>
-                     <div class="cart">
-                         <p>₦3000</p>
-                         <button class="add-to-cart-btn" data-name="Scotch" data-price="3000">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="drinks" id="box21">
-                     <img src="img/drink3.jpg" alt="Smoothie">
-                     <div class="h1">Vodka</div>
-                     <div class="cart">
-                         <p>₦10000</p>
-                         <button class="add-to-cart-btn" data-name="Vodka" data-price="10000">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="drinks" id="box22">
-                     <img src="img/drink4.jpg" alt="Smoothie">
-                     <div class="h1">Red Wine</div>
-                     <div class="cart">
-                         <p>₦10000</p>
-                         <button class="add-to-cart-btn" data-name="Red Wine" data-price="10000">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="drinks" id="box23">
-                     <img src="img/drink5.jpg" alt="Smoothie">
-                     <div class="h1">Berry Smoothie</div>
-                     <div class="cart">
-                         <p>₦10000</p>
-                         <button class="add-to-cart-btn" data-name="Berry Smoothie" data-price="10000">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <!-- Dish Example -->
-                 <div class="boxx" data-category="dishes" id="box24">
-                     <img src="img/dish1.jpg" alt="Grilled Chicken">
-                     <div class="h1">Naija Jollof</div>
-                     <div class="cart">
-                         <p>₦5500</p>
-                         <button class="add-to-cart-btn" data-name="Naija Jollof" data-price="5500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="dishes" id="box25">
-                     <img src="img/dish2.jpg" alt="Grilled Chicken">
-                     <div class="h1">Fried Rice</div>
-                     <div class="cart">
-                         <p>₦5500</p>
-                         <button class="add-to-cart-btn" data-name="Fried Rice" data-price="5500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="dishes" id="box26">
-                     <img src="img/dish3.jpg" alt="Grilled Chicken">
-                     <div class="h1">Egg-Fried Rice</div>
-                     <div class="cart">
-                         <p>₦6000</p>
-                         <button class="add-to-cart-btn" data-name="Egg-Fried Rice" data-price="6000">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="dishes" id="box27">
-                     <img src="img/dish4.jpg" alt="Grilled Chicken">
-                     <div class="h1">Cocunut Rice</div>
-                     <div class="cart">
-                         <p>₦6000</p>
-                         <button class="add-to-cart-btn" data-name="Cocunut Rice" data-price="6000">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="dishes" id="box28">
-                     <img src="img/dish5.jpg" alt="Grilled Chicken">
-                     <div class="h1">Rice with Stew</div>
-                     <div class="cart">
-                         <p>₦6000</p>
-                         <button class="add-to-cart-btn" data-name="Rice with Stew" data-price="6000">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="dishes" id="box29">
-                     <img src="img/dish6.jpg" alt="Grilled Chicken">
-                     <div class="h1">Sea-Food Rice</div>
-                     <div class="cart">
-                         <p>₦6000</p>
-                         <button class="add-to-cart-btn" data-name="Sea-Food Rice" data-price="6000">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="dishes" id="box30">
-                     <img src="img/dish7.jpg" alt="Grilled Chicken">
-                     <div class="h1">Spaghetti</div>
-                     <div class="cart">
-                         <p>₦6000</p>
-                         <button class="add-to-cart-btn" data-name="Spaghetti" data-price="6000">Add To Cart</button>
-                     </div>
-                 </div>
-                 <div class="boxx" data-category="dishes" id="box31">
-                     <img src="img/dish8.jpg" alt="Grilled Chicken">
-                     <div class="h1">Macaroni</div>
-                     <div class="cart">
-                         <p>₦4500</p>
-                         <button class="add-to-cart-btn" data-name="Macaroni" data-price="4500">Add To Cart</button>
-                     </div>
-                 </div>
-          
-         
-                 <!-- Snack -->
-                 <div class="boxx" data-category="snacks" id="box32">
-                     <img src="img/snack1.jpg" alt="Cheese Sticks">
-                     <div class="h1">Fried Ice-cream</div>
-                     <div class="cart">
-                         <p>₦2500</p>
-                         <button class="add-to-cart-btn" data-name="Fried Ice-cream" data-price="2500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="snacks" id="box33">
-                     <img src="img/snack11 (2).jpg" alt="Cheese Sticks">
-                     <div class="h1">Cup Cake</div>
-                     <div class="cart">
-                         <p>₦2500</p>
-                         <button class="add-to-cart-btn" data-name="Cup Cake" data-price="2500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="snacks" id="box34">
-                     <img src="img/snack2.jpg" alt="Cheese Sticks">
-                     <div class="h1">Fries and Chicken</div>
-                     <div class="cart">
-                         <p>₦2500</p>
-                         <button class="add-to-cart-btn" data-name="Fries and Chicken" data-price="2500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="snacks" id="box35">
-                     <img src="img/snack3.jpg" alt="Cheese Sticks">
-                     <div class="h1">Burger</div>
-                     <div class="cart">
-                         <p>₦2500</p>
-                         <button class="add-to-cart-btn" data-name="Burger" data-price="2500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="snacks" id="box36">
-                     <img src="img/snack4.jpg" alt="Spring Rolls">
-                     <div class="h1">Choco-Cookies</div>
-                     <div class="cart">
-                         <p>₦2500</p>
-                         <button class="add-to-cart-btn" data-name="Choco-Cookies" data-price="2500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="snacks" id="box37">
-                     <img src="img/snack5.jpg" alt="Spring Rolls">
-                     <div class="h1">Sharwarma</div>
-                     <div class="cart">
-                         <p>₦2500</p>
-                         <button class="add-to-cart-btn" data-name="Sharwarma" data-price="2500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="snacks" id="box38">
-                     <img src="img/snack6.jpg" alt="Spring Rolls">
-                     <div class="h1">Pizza</div>
-                     <div class="cart">
-                         <p>₦2500</p>
-                         <button class="add-to-cart-btn" data-name="Pizza" data-price="2500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="snacks" id="box39">
-                     <img src="img/snack12.jpg" alt="Spring Rolls">
-                     <div class="h1">Spring Rolls</div>
-                     <div class="cart">
-                         <p>₦2500</p>
-                         <button class="add-to-cart-btn" data-name="Spring Rolls" data-price="2500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="snacks" id="box40">
-                     <img src="img/snack12.jpg" alt="Spring Rolls">
-                     <div class="h1">Spring Rolls</div>
-                     <div class="cart">
-                         <p>₦2500</p>
-                         <button class="add-to-cart-btn" data-name="Spring Rolls" data-price="2500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-                 <div class="boxx" data-category="snacks" id="box40">
-                     <img src="img/snack12.jpg" alt="Spring Rolls">
-                     <div class="h1">Spring Rolls</div>
-                     <div class="cart">
-                         <p>₦2500</p>
-                         <button class="add-to-cart-btn" data-name="Spring Rolls" data-price="2500">Add To Cart</button>
-                     </div>
-                 </div>
-         
-             <!-- Add more boxes as needed -->
-           </div>
+      <div class="boxx" data-category="soup" id="box4">
+        <img src="../img/Soup4.jpg" alt="Lasagna" />
+        <div class="h1">Vegetable-Soup</div>
+        <div class="cart">
+          <p>₦5000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Vegetable-Soup"
+            data-price="5000"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
 
-        <!-- Cart Sidebar -->
-<div class="cart-container" id="cart-container">
-    <h2>Your Cart</h2>
-    <div class="cart-items" id="cart-items"></div>
-    <p class="cart-total" id="cart-total">Total: ₦0.00</p>
-    <button onclick="clearCart()">Clear Cart</button>
-    <button onclick="closeCart()">Close</button>
-    <button><a href="order.html" style="text-decoration: none; color: black;">Order Now</a></button>
-</div>
+      <!-- Vegetarian Dish -->
+      <div class="boxx" data-category="vegetarian" id="box5">
+        <img src="../img/vegetarian1.jpg" alt="Vegetarian Dish" />
+        <div class="h1">Moi-Moi</div>
+        <div class="cart">
+          <p>₦800</p>
+          <button class="add-to-cart-btn" data-name="Moi-Moi" data-price="800">
+            Add To Cart
+          </button>
+        </div>
+      </div>
 
-<!-- Success Message -->
-<div class="success-message" id="success-message">
-    Item successfully added to cart!
-</div>
+      <div class="boxx" data-category="vegetarian" id="box6">
+        <img src="../img/vegetarian2.jpg" alt="Vegetarian Dish" />
+        <div class="h1">Fried Plantain$Beans</div>
+        <div class="cart">
+          <p>₦1250</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Fried Plantain with Beans"
+            data-price="1250"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
 
-  
+      <div class="boxx" data-category="vegetarian" id="box7">
+        <img src="../img/vegetarian3.jpg" alt="Vegetarian Dish" />
+        <div class="h1">Cooked Potatoes</div>
+        <div class="cart">
+          <p>₦1500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Cooked Potatoes"
+            data-price="1500"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
 
-<footer>
+      <div class="boxx" data-category="vegetarian" id="box8">
+        <img src="../img/vegetarian4.jpg" alt="Vegetarian Dish" />
+        <div class="h1">Yam Porridge</div>
+        <div class="cart">
+          <p>₦2800</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Yam Porridge"
+            data-price="2800"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
 
-  
-    <div class="topa">
-     
+      <div class="boxx" data-category="vegetarian" id="box9">
+        <img src="../img/vegetarian5.jpg" alt="Vegetarian Dish" id="box9" />
+        <div class="h1">Plantain Porridge</div>
+        <div class="cart">
+          <p>₦2800</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Plantain Porridge"
+            data-price="2800"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="vegetarian" id="box10">
+        <img src="../img/vegetarian6-min.jpg" alt="Vegetarian Dish" />
+        <div class="h1">Beans Cake</div>
+        <div class="cart">
+          <p>₦800</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Beans Cake"
+            data-price="800"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Dessert Dish -->
+      <div class="boxx" data-category="dessert" id="box12">
+        <img src="../img/dessert1.jpg" alt="Chocolate Cake" />
+        <div class="h1">Chocolate Cake</div>
+        <div class="cart">
+          <p>₦1300</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Chocolate Cake"
+            data-price="1300"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dessert" id="box13">
+        <img src="../img/dessert13.jpg" alt="Chocolate Cake" />
+        <div class="h1">Sandwich</div>
+        <div class="cart">
+          <p>₦1400</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Sandwich"
+            data-price="1400"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dessert" id="box14">
+        <img src="../img/dessert2.jpg" alt="Chocolate Cake" />
+        <div class="h1">Vanilla Cake</div>
+        <div class="cart">
+          <p>₦1300</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Vanilla Cake"
+            data-price="1300"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dessert" id="box15">
+        <img src="../img/dessert3.jpg" alt="Chocolate Cake" />
+        <div class="h1">Chocolate ice-cream</div>
+        <div class="cart">
+          <p>₦1300</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Chocolate ice-cream"
+            data-price="1300"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dessert" id="box16">
+        <img src="../img/dessert4.jpg" alt="Chocolate Cake" />
+        <div class="h1">Doughnut</div>
+        <div class="cart">
+          <p>₦1300</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Doughnut"
+            data-price="1300"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dessert" id="box17">
+        <img src="../img/dessert5.jpg" alt="Chocolate Cake" />
+        <div class="h1">Berries</div>
+        <div class="cart">
+          <p>₦1450</p>
+          <button class="add-to-cart-btn" data-name="Berries" data-price="1450">
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dessert" id="box18">
+        <img src="../img/dessert6.jpg" alt="Chocolate Cake" />
+        <div class="h1">Choco-Vanila</div>
+        <div class="cart">
+          <p>₦1400</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Choco-Vanilla"
+            data-price="1400"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Drinks -->
+      <div class="boxx" data-category="drinks" id="box19">
+        <img src="../img/drink1.jpg" alt="Smoothie" />
+        <div class="h1">Smtnn</div>
+        <div class="cart">
+          <p>₦3000</p>
+          <button class="add-to-cart-btn" data-name="Smtnn" data-price="3000">
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="drinks" id="box20">
+        <img src="../img/drink2.jpg" alt="Smoothie" />
+        <div class="h1">Scotch</div>
+        <div class="cart">
+          <p>₦3000</p>
+          <button class="add-to-cart-btn" data-name="Scotch" data-price="3000">
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="drinks" id="box21">
+        <img src="../img/drink3.jpg" alt="Smoothie" />
+        <div class="h1">Vodka</div>
+        <div class="cart">
+          <p>₦10000</p>
+          <button class="add-to-cart-btn" data-name="Vodka" data-price="10000">
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="drinks" id="box22">
+        <img src="../img/drink4.jpg" alt="Smoothie" />
+        <div class="h1">Red Wine</div>
+        <div class="cart">
+          <p>₦10000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Red Wine"
+            data-price="10000"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="drinks" id="box23">
+        <img src="../img/drink5.jpg" alt="Smoothie" />
+        <div class="h1">Berry Smoothie</div>
+        <div class="cart">
+          <p>₦10000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Berry Smoothie"
+            data-price="10000"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Dish Example -->
+      <div class="boxx" data-category="dishes" id="box24">
+        <img src="../img/dish1.jpg" alt="Grilled Chicken" />
+        <div class="h1">Naija Jollof</div>
+        <div class="cart">
+          <p>₦5500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Naija Jollof"
+            data-price="5500"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dishes" id="box25">
+        <img src="../img/dish2.jpg" alt="Grilled Chicken" />
+        <div class="h1">Fried Rice</div>
+        <div class="cart">
+          <p>₦5500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Fried Rice"
+            data-price="5500"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dishes" id="box26">
+        <img src="../img/dish3.jpg" alt="Grilled Chicken" />
+        <div class="h1">Egg-Fried Rice</div>
+        <div class="cart">
+          <p>₦6000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Egg-Fried Rice"
+            data-price="6000"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dishes" id="box27">
+        <img src="../img/dish4.jpg" alt="Grilled Chicken" />
+        <div class="h1">Cocunut Rice</div>
+        <div class="cart">
+          <p>₦6000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Cocunut Rice"
+            data-price="6000"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dishes" id="box28">
+        <img src="../img/dish5.jpg" alt="Grilled Chicken" />
+        <div class="h1">Rice with Stew</div>
+        <div class="cart">
+          <p>₦6000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Rice with Stew"
+            data-price="6000"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dishes" id="box29">
+        <img src="../img/dish6.jpg" alt="Grilled Chicken" />
+        <div class="h1">Sea-Food Rice</div>
+        <div class="cart">
+          <p>₦6000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Sea-Food Rice"
+            data-price="6000"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dishes" id="box30">
+        <img src="../img/dish7.jpg" alt="Grilled Chicken" />
+        <div class="h1">Spaghetti</div>
+        <div class="cart">
+          <p>₦6000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Spaghetti"
+            data-price="6000"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+      <div class="boxx" data-category="dishes" id="box31">
+        <img src="../img/dish8.jpg" alt="Grilled Chicken" />
+        <div class="h1">Macaroni</div>
+        <div class="cart">
+          <p>₦4500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Macaroni"
+            data-price="4500"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Snack -->
+      <div class="boxx" data-category="snacks" id="box32">
+        <img src="../img/snack1.jpg" alt="Cheese Sticks" />
+        <div class="h1">Fried Ice-cream</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Fried Ice-cream"
+            data-price="2500"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box33">
+        <img src="../img/snack11 (2).jpg" alt="Cheese Sticks" />
+        <div class="h1">Cup Cake</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Cup Cake"
+            data-price="2500"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box34">
+        <img src="../img/snack2.jpg" alt="Cheese Sticks" />
+        <div class="h1">Fries and Chicken</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Fries and Chicken"
+            data-price="2500"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box35">
+        <img src="../img/snack3.jpg" alt="Cheese Sticks" />
+        <div class="h1">Burger</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button class="add-to-cart-btn" data-name="Burger" data-price="2500">
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box36">
+        <img src="../img/snack4.jpg" alt="Spring Rolls" />
+        <div class="h1">Choco-Cookies</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Choco-Cookies"
+            data-price="2500"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box37">
+        <img src="../img/snack5.jpg" alt="Spring Rolls" />
+        <div class="h1">Sharwarma</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Sharwarma"
+            data-price="2500"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box38">
+        <img src="../img/snack6.jpg" alt="Spring Rolls" />
+        <div class="h1">Pizza</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button class="add-to-cart-btn" data-name="Pizza" data-price="2500">
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box39">
+        <img src="../img/snack12.jpg" alt="Spring Rolls" />
+        <div class="h1">Spring Rolls</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Spring Rolls"
+            data-price="2500"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box40">
+        <img src="../img/snack12.jpg" alt="Spring Rolls" />
+        <div class="h1">Spring Rolls</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Spring Rolls"
+            data-price="2500"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box40">
+        <img src="../img/snack12.jpg" alt="Spring Rolls" />
+        <div class="h1">Spring Rolls</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Spring Rolls"
+            data-price="2500"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Add more boxes as needed -->
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-container" id="cart-container">
+      <h2>Your Cart</h2>
+      <div class="cart-items" id="cart-items"></div>
+      <p class="cart-total" id="cart-total">Total: ₦0.00</p>
+      <button onclick="clearCart()">Clear Cart</button>
+      <button onclick="closeCart()">Close</button>
+      <button>
+        <a href="order.html" style="text-decoration: none; color: black"
+          >Order Now</a
+        >
+      </button>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="success-message">
+      Item successfully added to cart!
+    </div>
+
+    <footer>
+      <div class="topa">
         <div class="newsletter-container">
-            <h1>Subscribe to Our Newsletter</h1>
-            <p>Get the latest updates straight to your inbox.</p>
-            <form id="newsletter-form">
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                placeholder="Enter your email address" 
-                required
-              >
-              <button type="submit">Subscribe</button>
-            </form>
-            <p id="message"></p>
-          </div>
+          <h1>Subscribe to Our Newsletter</h1>
+          <p>Get the latest updates straight to your inbox.</p>
+          <form id="newsletter-form">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p id="message"></p>
+        </div>
 
         <div class="lefta">
-        
-             <h2>CONTACT INFO</h2>
+          <h2>CONTACT INFO</h2>
 
-             <p>+2348148238997</p>
+          <p>+2348148238997</p>
 
-             <a href="mailto:jroyalaffairs@gmail.com"> <p>jroyalaffairs@gmail.com</p></a>
+          <a href="mailto:jroyalaffairs@gmail.com">
+            <p>jroyalaffairs@gmail.com</p></a
+          >
 
-             <p>36 Behind Flat Road, Nsukka, Nigeria</p>
+          <p>36 Behind Flat Road, Nsukka, Nigeria</p>
 
-             <div class="leftaimg" style="cursor: pointer; padding: 5px;">
-                <img  style="height: 40px; border-radius: 40px;" src="img/fb icon.png" alt="">
-                <img style="height: 40px;" src="img/icons8-whatsapp-50.png" alt="">
-                <img style="height: 40px; border-radius: 40px;" src="img/ig icon.png" alt="">
-                <img style="height: 40px;" src="img/icons8-twitterx-50.png" alt="">
-             </div>
-
+          <div class="leftaimg" style="cursor: pointer; padding: 5px">
+            <img
+              style="height: 40px; border-radius: 40px"
+              src="../img/fb icon.png"
+              alt=""
+            />
+            <img
+              style="height: 40px"
+              src="../img/icons8-whatsapp-50.png"
+              alt=""
+            />
+            <img
+              style="height: 40px; border-radius: 40px"
+              src="../img/ig icon.png"
+              alt=""
+            />
+            <img
+              style="height: 40px"
+              src="../img/icons8-twitterx-50.png"
+              alt=""
+            />
+          </div>
         </div>
-
 
         <div class="righta">
-            <h2>OPENING HOURS</h2>
-            <p>MONDAY - SATURDAY: 8:00AM - 10:00PM</p>
-            <p>SUNDAY: 8:00AM - 10:00PM</p>
-
+          <h2>OPENING HOURS</h2>
+          <p>MONDAY - SATURDAY: 8:00AM - 10:00PM</p>
+          <p>SUNDAY: 8:00AM - 10:00PM</p>
         </div>
+      </div>
 
+      <hr />
 
-    </div>
+      <div class="bottoma">
+        <img src="../img/sample.png" alt="" />
 
-    <hr>
+        <p>© 2024 Royal Grills'n'Chops. All rights reserved.</p>
+      </div>
+    </footer>
 
-    <div class="bottoma">
+    <script src="../js/menu.js"></script>
 
-   <img src="img/sample.png" alt="">
-
-   <p >© 2024 Royal Grills'n'Chops. All rights reserved.</p>
-
-    </div>
-
-   </footer>
-   
-  <script src="menu.js"></script>
-
-  <script src="script.js"></script>
-</body>
+    <script src="../js/script.js"></script>
+  </body>
 </html>

@@ -1,9 +1,10 @@
-
-
-
 // List of words to cycle through
-const words = ["Welcome to J-Royal", "Satisfy your Cravings", "...with excellence", "And don't forget..."
-  ,"WE SERVE YOU!"
+const words = [
+  "Welcome to J-Royal",
+  "Satisfy your Cravings",
+  "...with excellence",
+  "And don't forget...",
+  "WE SERVE YOU!",
 ];
 let currentWordIndex = 0; // Index to track the current word in the array
 let currentText = ""; // Variable to store the current text being typed
@@ -16,24 +17,24 @@ function typeEffect() {
   const currentWord = words[currentWordIndex]; // Get the current word to type
 
   if (isDeleting) {
-      // If we are deleting, remove one character at a time
-      currentText = currentWord.substring(0, currentText.length - 1);
-      typingTextElement.textContent = currentText;
+    // If we are deleting, remove one character at a time
+    currentText = currentWord.substring(0, currentText.length - 1);
+    typingTextElement.textContent = currentText;
 
-      if (currentText === "") {
-          isDeleting = false;
-          currentWordIndex = (currentWordIndex + 1) % words.length; // Move to next word
-      }
+    if (currentText === "") {
+      isDeleting = false;
+      currentWordIndex = (currentWordIndex + 1) % words.length; // Move to next word
+    }
   } else {
-      // If we are typing, add one character at a time
-      currentText = currentWord.substring(0, currentText.length + 1);
-      typingTextElement.textContent = currentText;
+    // If we are typing, add one character at a time
+    currentText = currentWord.substring(0, currentText.length + 1);
+    typingTextElement.textContent = currentText;
 
-      if (currentText === currentWord) {
-          isDeleting = true;
-          setTimeout(typeEffect, 1000); // Pause before deleting
-          return;
-      }
+    if (currentText === currentWord) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000); // Pause before deleting
+      return;
+    }
   }
 
   setTimeout(typeEffect, speed);
@@ -42,26 +43,19 @@ function typeEffect() {
 // Start the typing effect
 typeEffect();
 
-
-
 // POP UP WHATSAPP
-function showPopup(){
-
-document.getElementById('popup').style.display = 'block';}
-
-function closePopup(){
-
-document.getElementById('popup').style.display = 'none';
+function showPopup() {
+  document.getElementById("popup").style.display = "block";
 }
 
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
 
-
-
-
-const carouselTrack = document.querySelector('.carousel-track');
-const prevButton = document.querySelector('.prev-btn');
-const nextButton = document.querySelector('.next-btn');
-const images = document.querySelectorAll('.carousel-track img');
+const carouselTrack = document.querySelector(".carousel-track");
+const prevButton = document.querySelector(".prev-btn");
+const nextButton = document.querySelector(".next-btn");
+const images = document.querySelectorAll(".carousel-track img");
 
 let currentIndex = 0;
 
@@ -94,7 +88,7 @@ function setResetDelay() {
 }
 
 // Move to the previous image
-prevButton.addEventListener('click', () => {
+prevButton.addEventListener("click", () => {
   currentIndex--;
   if (currentIndex < 0) {
     currentIndex = images.length - 4; // Stop at the first image
@@ -103,7 +97,7 @@ prevButton.addEventListener('click', () => {
 });
 
 // Move to the next image
-nextButton.addEventListener('click', () => {
+nextButton.addEventListener("click", () => {
   currentIndex++;
   if (currentIndex > images.length - 4) {
     currentIndex = 0; // Wrap back to the start
@@ -121,10 +115,12 @@ let autoSlideInterval = setInterval(() => {
 }, 3000);
 
 // Pause auto-slide on hover
-carouselTrack.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+carouselTrack.addEventListener("mouseenter", () =>
+  clearInterval(autoSlideInterval)
+);
 
 // Resume auto-slide on mouse leave
-carouselTrack.addEventListener('mouseleave', () => {
+carouselTrack.addEventListener("mouseleave", () => {
   autoSlideInterval = setInterval(() => {
     currentIndex++;
     if (currentIndex > images.length - 4) {
@@ -138,25 +134,18 @@ carouselTrack.addEventListener('mouseleave', () => {
 setResetDelay();
 
 // Reapply the reset delay on window resize
-window.addEventListener('resize', setResetDelay);
-
-
-
-
-
+window.addEventListener("resize", setResetDelay);
 
 // Get the elements
-const messageOverlay = document.getElementById('messageOverlay');
-const closeMessage = document.getElementById('closeMessage');
+const messageOverlay = document.getElementById("messageOverlay");
+const closeMessage = document.getElementById("closeMessage");
 
 // Show the popup after 5 seconds
 setTimeout(() => {
-  messageOverlay.style.display = 'flex';
+  messageOverlay.style.display = "flex";
 }, 5000);
 
 // Close the popup when the close button is clicked
-closeMessage.addEventListener('click', () => {
-  messageOverlay.style.display = 'none';
+closeMessage.addEventListener("click", () => {
+  messageOverlay.style.display = "none";
 });
-
-
