@@ -167,7 +167,7 @@ class Order(db.Model, TimestampMixin, DatabaseHelperMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     dishes = db.Column(db.String(256), nullable=False)
-    price = db.Column(db.Float)
+    price = db.Column(db.Float, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
 
     def __init__(self, dishes: list, user_id: int):
