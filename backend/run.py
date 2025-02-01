@@ -10,4 +10,4 @@ with app.app_context():
     db.create_all()
 
 if __name__ == "__main__":
-    app.run(debug=True, port=os.getenv("PORT"), host=os.getenv("SERVER_NAME"))
+    app.run(debug=True, port=os.getenv("PORT"), host=os.getenv("HOSTNAME"))

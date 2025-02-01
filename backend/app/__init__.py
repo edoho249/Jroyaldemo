@@ -12,6 +12,8 @@ from logging.handlers import RotatingFileHandler
 load_dotenv()
 
 log_dir = os.getenv("LOG_DIR")
+template_folder = os.path.join(os.getenv("BASE_DIR"), "frontend", "templates")
+static_folder = os.path.join(os.getenv("BASE_DIR"), "frontend")
 
 # create folder if not exists
 os.makedirs(log_dir, exist_ok=True)
@@ -44,7 +46,13 @@ logger.addHandler(handler)
 
 
 def create_app(config=Config):
-    app = Flask(__name__)
+    from .models import User
+
+    app = Flask(__name__, template_folder=template_folder, static_folder=static_folder)
+
+    @login_manager.user_loader
+    def load_user(id):
+        return User.query.get(int(id))
 
     app.config.from_object(config)
     db.init_app(app)
@@ -54,9 +62,10 @@ def create_app(config=Config):
 
     from app.api.routes import api
     from app.auth.routes import auth
+    from app.main.routes import main
 
     app.register_blueprint(auth)
+    app.register_blueprint(main)
     app.register_blueprint(api, url_prefix="/api")
-
 
     return app
