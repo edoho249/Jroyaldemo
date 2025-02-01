@@ -21,9 +21,11 @@ class TimestampMixin(object):
     def format_date(self):
         return (
             self.created_at.strftime("%d %b %Y"),
-            self.updated_at.strftime("%d %b %Y")
-            if self.updated_at
-            else self.created_at.strftime("%d %b %Y"),
+            (
+                self.updated_at.strftime("%d %b %Y")
+                if self.updated_at
+                else self.created_at.strftime("%d %b %Y")
+            ),
             None,
         )
 
