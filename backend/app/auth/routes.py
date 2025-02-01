@@ -41,13 +41,14 @@ def login():
 
         user = User.query.filter(User.email == email).first()
         if not user or not user.check_password(password):
+            logger.info(f"USER NOT FOUND WITH EMAIL: {email}")
             flash("Invalid username or password.", "danger")
             return render_template(
                 "signup.html",
                 next=request.args.get("next") or None,
             )
-
         login_user(user)
+        logger.info(f"LOGGED IN USER: #{user.id} ({user.display_name()})")
         next_page = request.args.get("next")
         text = "You are now signed in!"
         if next_page:
@@ -69,11 +70,15 @@ def signup():
         firstname = request.form.get("firstname").strip()
         lastname = request.form.get("lastname").strip()
         email = request.form.get("email").strip()
+        phone_no = request.form.get("phoneNumber").strip()
+        dob = request.form.get("dob").strip()
         password = request.form.get("password").strip()
-        organization = request.form.get("organization").strip()
 
         check = User.query.filter(User.email == email).first()
         if check:
+            logger.error(
+                f"An account already exists with this email: {email}. Please use a different email to sign up"
+            )
             flash(
                 "An account already exists with this email. Please use a different email to sign up",
                 "danger",
@@ -85,12 +90,14 @@ def signup():
             firstname=firstname,
             lastname=lastname,
             email=email,
+            phone_no=phone_no,
+            dob=dob,
             password=password,
-            organization=organization,
         )
         new_user.insert()
-        send_registration_email(new_user)
+        # send_registration_email(new_user)
         login_user(new_user)
+        logger.info(f"User created successfully! - {new_user.display_name()}")
         flash(
             "Your account has been created successfully! Follow the link in your inbox to verify your email.",
             "success",

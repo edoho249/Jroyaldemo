@@ -56,14 +56,26 @@ class User(db.Model, TimestampMixin, UserMixin, DatabaseHelperMixin):
     firstname = db.Column(db.String(50), nullable=False)
     lastname = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(100), nullable=False, unique=True)
+    phone_no = db.Column(db.String(20), nullable=False)
+    dob = db.Column(db.Date)
     account_type = db.Column(db.String(20), default="regular")
     password_hash = db.Column(db.String(2000), nullable=False)
     orders = db.relationship("Order", backref="user", cascade="delete,all")
 
-    def __init__(self, firstname, lastname, email, password=None) -> None:
+    def __init__(
+        self,
+        firstname: str,
+        lastname: str,
+        email: str,
+        phone_no: str,
+        dob: str,
+        password=None,
+    ) -> None:
         self.firstname = firstname
         self.lastname = lastname
         self.email = email
+        self.phone_no = phone_no
+        self.dob = dob
         self.password_hash = self.get_password_hash(str(password)) if password else None
         self.uid = uuid.uuid4().hex
 
@@ -112,7 +124,9 @@ class Dish(db.Model, TimestampMixin, DatabaseHelperMixin):
     price = db.Column(db.Float, nullable=False)
     popular = db.Column(db.Boolean, default=False)
 
-    def __init__(self, name, category, image, price, popular=False):
+    def __init__(
+        self, name: str, category: str, image: str, price: float, popular: bool = False
+    ):
         self.name = name
         self.category = category
         self.image = image
@@ -146,3 +160,33 @@ class Dish(db.Model, TimestampMixin, DatabaseHelperMixin):
                 ]
             }
         return {cat: Dish.dishes_by_category(cat)[cat] for cat in Dish.categories()}
+
+
+class Order(db.Model, TimestampMixin, DatabaseHelperMixin):
+    __tablename__ = "order"
+
+    id = db.Column(db.Integer, primary_key=True)
+    dishes = db.Column(db.String(256), nullable=False)
+    price = db.Column(db.Float)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+
+    def __init__(self, dishes: list, user_id: int):
+        self.user_id = user_id
+        self.dishes = ",".join(
+            [
+                db.session.query(Dish.id).filter(Dish.name == dish).first()
+                for dish in dishes
+            ]
+        )
+        self.price = sum(
+            [
+                db.session.query(Dish.price).filter(Dish.name == dish).first()
+                for dish in dishes
+            ]
+        )
+
+    def _get_dish_ids(self):
+        return [int(dish_id) for dish_id in str(self.dishes).split(",")]
+
+    def get_dishes(self):
+        return [Dish.query.get(dish_id).parse() for dish_id in self._get_dish_ids()]

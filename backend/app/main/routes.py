@@ -1,8 +1,6 @@
 # installed imports
-from flask import Blueprint, render_template, current_app
+from flask import Blueprint, render_template
 
-# local imports
-from .. import logger
 
 main = Blueprint("main", __name__)
 
